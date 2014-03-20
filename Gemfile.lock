@@ -1,0 +1,258 @@
+GIT
+  remote: git://github.com/asee/whenever.git
+  revision: e4f7b42a8302d4719a09eede638fcd3ff7934e0c
+  specs:
+    whenever (0.4.2.1)
+      chronic (>= 0.2.3)
+
+GIT
+  remote: git://github.com/mbleigh/seed-fu.git
+  revision: 6dbf3fac92666f2fcfc65ab882fb95ed3ef51712
+  specs:
+    seed-fu (2.3.0)
+      activerecord (>= 3.1, < 4.1)
+      activesupport (>= 3.1, < 4.1)
+
+GIT
+  remote: git@git.asee.org:gems/authenticated_system.git
+  revision: 0733bb5b6c4450ed1e6adff6081d9c940df5d465
+  branch: master
+  specs:
+    authenticated_system (0.0.1)
+
+GIT
+  remote: git@git.asee.org:gems/deploy.git
+  revision: e92b5eeb624d790e70e1f72569ea46d778047795
+  branch: realgem
+  specs:
+    deploy (0.0.3)
+      capistrano (>= 2.11)
+
+GIT
+  remote: git@git.asee.org:plugins/admin.git
+  revision: f3e5757cdd8249ab9648eb9b4d699a40bcf5722e
+  branch: rails4
+  specs:
+    admin (1.0.0)
+      activeresource
+      calendar_date_select (= 1.16.2)
+      haml-rails
+      log4r
+      make_resourceful
+      newrelic_rpm
+      pdf-toolkit
+      rails (>= 4.0.0)
+      rake (= 10.1.1)
+      simple-navigation (= 3.11.0)
+      will_paginate (~> 3.0)
+
+GIT
+  remote: https://github.com/asee/make_resourceful
+  revision: c82daf8e4a3b5ec370ca584c533191315a745cb9
+  specs:
+    make_resourceful (1.0.1)
+
+GIT
+  remote: https://github.com/binarylogic/authlogic
+  revision: abc09970ed1fad98c6c12f4ca64d1670d37d11db
+  ref: abc09970ed1fad98c6c12f4ca64d1670d37d11db
+  specs:
+    authlogic (3.3.0)
+      activerecord (>= 3.2)
+      activesupport (>= 3.2)
+
+PATH
+  remote: ../apply-rails4
+  specs:
+    apply (1.0.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    aasm (3.1.1)
+    actionmailer (4.0.4)
+      actionpack (= 4.0.4)
+      mail (~> 2.5.4)
+    actionpack (4.0.4)
+      activesupport (= 4.0.4)
+      builder (~> 3.1.0)
+      erubis (~> 2.7.0)
+      rack (~> 1.5.2)
+      rack-test (~> 0.6.2)
+    actionpack-page_caching (1.0.2)
+      actionpack (>= 4.0.0, < 5)
+    activemodel (4.0.4)
+      activesupport (= 4.0.4)
+      builder (~> 3.1.0)
+    activerecord (4.0.4)
+      activemodel (= 4.0.4)
+      activerecord-deprecated_finders (~> 1.0.2)
+      activesupport (= 4.0.4)
+      arel (~> 4.0.0)
+    activerecord-deprecated_finders (1.0.3)
+    activeresource (4.0.0)
+      activemodel (~> 4.0)
+      activesupport (~> 4.0)
+      rails-observers (~> 0.1.1)
+    activesupport (4.0.4)
+      i18n (~> 0.6, >= 0.6.9)
+      minitest (~> 4.2)
+      multi_json (~> 1.3)
+      thread_safe (~> 0.1)
+      tzinfo (~> 0.3.37)
+    acts_as_list (0.4.0)
+      activerecord (>= 3.0)
+    arel (4.0.2)
+    atomic (1.1.16)
+    builder (3.1.4)
+    byebug (2.7.0)
+      columnize (~> 0.3)
+      debugger-linecache (~> 1.2)
+    calendar_date_select (1.16.2)
+    capistrano (3.1.0)
+      i18n
+      rake (>= 10.0.0)
+      sshkit (~> 1.3)
+    chronic (0.10.2)
+    coderay (1.1.0)
+    columnize (0.3.6)
+    daemons (1.0.10)
+    debugger-linecache (1.2.0)
+    dynamic_form (1.1.4)
+    erubis (2.7.0)
+    faker (0.3.1)
+    fastercsv (1.5.5)
+    haml (4.0.5)
+      tilt
+    haml-rails (0.5.3)
+      actionpack (>= 4.0.1)
+      activesupport (>= 4.0.1)
+      haml (>= 3.1, < 5.0)
+      railties (>= 4.0.1)
+    hike (1.2.3)
+    i18n (0.6.9)
+    json (1.8.1)
+    log4r (1.1.10)
+    machinist (2.0)
+    mail (2.5.4)
+      mime-types (~> 1.16)
+      treetop (~> 1.4.8)
+    metaclass (0.0.4)
+    method_source (0.8.2)
+    mime-types (1.25.1)
+    minitest (4.7.5)
+    mocha (1.0.0)
+      metaclass (~> 0.0.1)
+    multi_json (1.9.2)
+    mysql2 (0.3.15)
+    net-scp (1.1.2)
+      net-ssh (>= 2.6.5)
+    net-ssh (2.8.0)
+    newrelic_rpm (3.7.3.204)
+    nokogiri (1.4.4)
+    pdf-toolkit (1.0.0.rc1)
+    polyglot (0.3.4)
+    pry (0.9.12.6)
+      coderay (~> 1.0)
+      method_source (~> 0.8)
+      slop (~> 3.4)
+    pry-byebug (1.3.2)
+      byebug (~> 2.7)
+      pry (~> 0.9.12)
+    rack (1.5.2)
+    rack-test (0.6.2)
+      rack (>= 1.0)
+    rails (4.0.4)
+      actionmailer (= 4.0.4)
+      actionpack (= 4.0.4)
+      activerecord (= 4.0.4)
+      activesupport (= 4.0.4)
+      bundler (>= 1.3.0, < 2.0)
+      railties (= 4.0.4)
+      sprockets-rails (~> 2.0.0)
+    rails-observers (0.1.2)
+      activemodel (~> 4.0)
+    rails_autolink (1.1.5)
+      rails (> 3.1)
+    railties (4.0.4)
+      actionpack (= 4.0.4)
+      activesupport (= 4.0.4)
+      rake (>= 0.8.7)
+      thor (>= 0.18.1, < 2.0)
+    rake (10.1.1)
+    rmagick (2.13.2)
+    rubyzip (1.1.2)
+    shoulda (3.5.0)
+      shoulda-context (~> 1.0, >= 1.0.1)
+      shoulda-matchers (>= 1.4.1, < 3.0)
+    shoulda-context (1.1.6)
+    shoulda-matchers (2.5.0)
+      activesupport (>= 3.0.0)
+    simple-navigation (3.11.0)
+      activesupport (>= 2.3.2)
+    slop (3.5.0)
+    sprockets (2.12.0)
+      hike (~> 1.2)
+      multi_json (~> 1.0)
+      rack (~> 1.0)
+      tilt (~> 1.1, != 1.3.0)
+    sprockets-rails (2.0.1)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      sprockets (~> 2.8)
+    sprockets_better_errors (0.0.4)
+      sprockets-rails (>= 1.0.0)
+    sshkit (1.3.0)
+      net-scp (>= 1.1.2)
+      net-ssh
+      term-ansicolor
+    term-ansicolor (1.3.0)
+      tins (~> 1.0)
+    thor (0.18.1)
+    thread_safe (0.2.0)
+      atomic (>= 1.1.7, < 2)
+    tilt (1.4.1)
+    tins (1.0.1)
+    treetop (1.4.15)
+      polyglot
+      polyglot (>= 0.3.1)
+    tzinfo (0.3.39)
+    will_paginate (3.0.5)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  aasm
+  actionpack-page_caching
+  activeresource
+  acts_as_list
+  admin!
+  apply!
+  authenticated_system!
+  authlogic!
+  byebug
+  capistrano
+  daemons (= 1.0.10)
+  deploy!
+  dynamic_form
+  faker (= 0.3.1)
+  fastercsv
+  haml
+  json
+  machinist (~> 2.0)
+  make_resourceful!
+  mocha
+  mysql2
+  nokogiri (= 1.4.4)
+  pdf-toolkit (~> 1.0.0.rc1)
+  pry-byebug
+  rails-observers
+  rails_autolink
+  rmagick (= 2.13.2)
+  rubyzip
+  seed-fu!
+  shoulda
+  shoulda-matchers
+  sprockets_better_errors
+  whenever (= 0.4.2.1)!

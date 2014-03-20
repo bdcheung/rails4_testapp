@@ -1,0 +1,18 @@
+common: &common_settings
+  code: rails4_testapp
+  name: Rails 4 Test App
+  title: Rails 4 Test App
+  deploy_name: rails4_testapp
+
+development:
+  <<: *common_settings
+benchmark:
+  <<: *common_settings
+integration:
+  <<: *common_settings
+staging:
+  <<: *common_settings  
+test:
+  <<: *common_settings
+production:
+  <<: *common_settings
