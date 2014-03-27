@@ -1,7 +1,7 @@
 common: &common_settings
   code: rails4_testapp
-  name: Rails 4 Test App
-  title: Rails 4 Test App
+  name: Rails_4_Test_App
+  title: Rails_4_Test_App
   deploy_name: rails4_testapp
 
 development:

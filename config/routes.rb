@@ -1,4 +1,6 @@
 Rails4Testapp::Application.routes.draw do
+  # mount Apply::Engine, at: "/apply"
+  # mount Admin::Engine, at: "/"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

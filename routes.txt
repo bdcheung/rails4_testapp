@@ -1,0 +1,302 @@
+Generate YAML File
+/Users/bdc/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/bundler/gems/deploy-e92b5eeb624d/lib/**/config/*.yml
+/Users/bdc/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/bundler/gems/deploy-e92b5eeb624d/lib/bootstrap_files/config/newrelic.example.yml
+ResourceLoader config_files
+/Users/bdc/rails_apps/rails4_testapp
+{"yml"=>["app_data.yml", "database.yml", "newrelic.yml", "program.yml", "resource.yml", "secrets.yml"]}
+** [Admin] Loaded app_data.yml
+** [Admin] Loaded database.yml
+** [Admin] Loaded newrelic.yml
+** [Admin] Loaded program.yml
+** [Admin] Loaded resource.yml
+** [Admin] Loaded secrets.yml
+                                                      Prefix Verb   URI Pattern                                                                             Controller#Action
+                                                  admin_root GET    /admin(.:format)                                                                        admin/sessions#new
+                                                 admin_login GET    /admin/login(.:format)                                                                  admin/sessions#new
+                                                admin_logout GET    /admin/logout(.:format)                                                                 admin/sessions#destroy
+                                                  admin_home GET    /admin/home(.:format)                                                                   admin/navigation#home
+                                               admin_session POST   /admin/session(.:format)                                                                admin/sessions#create
+                                           new_admin_session GET    /admin/session/new(.:format)                                                            admin/sessions#new
+                                          edit_admin_session GET    /admin/session/edit(.:format)                                                           admin/sessions#edit
+                                                             GET    /admin/session(.:format)                                                                admin/sessions#show
+                                                             PATCH  /admin/session(.:format)                                                                admin/sessions#update
+                                                             PUT    /admin/session(.:format)                                                                admin/sessions#update
+                                                             DELETE /admin/session(.:format)                                                                admin/sessions#destroy
+                                              admin_settings GET    /admin/settings(.:format)                                                               admin/settings/colors#settings
+                                      admin_navigation_index GET    /admin/navigation(.:format)                                                             admin/navigation#index
+                                                             POST   /admin/navigation(.:format)                                                             admin/navigation#create
+                                        new_admin_navigation GET    /admin/navigation/new(.:format)                                                         admin/navigation#new
+                                       edit_admin_navigation GET    /admin/navigation/:id/edit(.:format)                                                    admin/navigation#edit
+                                            admin_navigation GET    /admin/navigation/:id(.:format)                                                         admin/navigation#show
+                                                             PATCH  /admin/navigation/:id(.:format)                                                         admin/navigation#update
+                                                             PUT    /admin/navigation/:id(.:format)                                                         admin/navigation#update
+                                                             DELETE /admin/navigation/:id(.:format)                                                         admin/navigation#destroy
+                                  delete_admin_settings_user GET    /admin/settings/users/:id/delete(.:format)                                              admin/settings/users#delete
+                      update_authorized_admin_settings_users POST   /admin/settings/users/update_authorized(.:format)                                       admin/settings/users#update_authorized
+                                        admin_settings_users GET    /admin/settings/users(.:format)                                                         admin/settings/users#index
+                                                             POST   /admin/settings/users(.:format)                                                         admin/settings/users#create
+                                     new_admin_settings_user GET    /admin/settings/users/new(.:format)                                                     admin/settings/users#new
+                                    edit_admin_settings_user GET    /admin/settings/users/:id/edit(.:format)                                                admin/settings/users#edit
+                                         admin_settings_user GET    /admin/settings/users/:id(.:format)                                                     admin/settings/users#show
+                                                             PATCH  /admin/settings/users/:id(.:format)                                                     admin/settings/users#update
+                                                             PUT    /admin/settings/users/:id(.:format)                                                     admin/settings/users#update
+                                                             DELETE /admin/settings/users/:id(.:format)                                                     admin/settings/users#destroy
+                                      admin_settings_program POST   /admin/settings/program(.:format)                                                       admin/settings/programs#create
+                                  new_admin_settings_program GET    /admin/settings/program/new(.:format)                                                   admin/settings/programs#new
+                                 edit_admin_settings_program GET    /admin/settings/program/edit(.:format)                                                  admin/settings/programs#edit
+                                                             GET    /admin/settings/program(.:format)                                                       admin/settings/programs#show
+                                                             PATCH  /admin/settings/program(.:format)                                                       admin/settings/programs#update
+                                                             PUT    /admin/settings/program(.:format)                                                       admin/settings/programs#update
+                                                             DELETE /admin/settings/program(.:format)                                                       admin/settings/programs#destroy
+                                    admin_settings_ip_passes GET    /admin/settings/ip_passes(.:format)                                                     admin/settings/ip_passes#index
+                                                             POST   /admin/settings/ip_passes(.:format)                                                     admin/settings/ip_passes#create
+                                  new_admin_settings_ip_pass GET    /admin/settings/ip_passes/new(.:format)                                                 admin/settings/ip_passes#new
+                                 edit_admin_settings_ip_pass GET    /admin/settings/ip_passes/:id/edit(.:format)                                            admin/settings/ip_passes#edit
+                                      admin_settings_ip_pass GET    /admin/settings/ip_passes/:id(.:format)                                                 admin/settings/ip_passes#show
+                                                             PATCH  /admin/settings/ip_passes/:id(.:format)                                                 admin/settings/ip_passes#update
+                                                             PUT    /admin/settings/ip_passes/:id(.:format)                                                 admin/settings/ip_passes#update
+                                                             DELETE /admin/settings/ip_passes/:id(.:format)                                                 admin/settings/ip_passes#destroy
+                                       admin_settings_colors POST   /admin/settings/colors(.:format)                                                        admin/settings/colors#create
+                                   new_admin_settings_colors GET    /admin/settings/colors/new(.:format)                                                    admin/settings/colors#new
+                                  edit_admin_settings_colors GET    /admin/settings/colors/edit(.:format)                                                   admin/settings/colors#edit
+                                                             GET    /admin/settings/colors(.:format)                                                        admin/settings/colors#show
+                                                             PATCH  /admin/settings/colors(.:format)                                                        admin/settings/colors#update
+                                                             PUT    /admin/settings/colors(.:format)                                                        admin/settings/colors#update
+                                                             DELETE /admin/settings/colors(.:format)                                                        admin/settings/colors#destroy
+                               admin_settings_monitoring_log GET    /admin/settings/monitoring/log(.:format)                                                admin/settings/monitoring/log#index
+                      admin_settings_monitoring_delayed_jobs GET    /admin/settings/monitoring/delayed_jobs(.:format)                                       admin/settings/monitoring/delayed_jobs#index
+                                                             POST   /admin/settings/monitoring/delayed_jobs(.:format)                                       admin/settings/monitoring/delayed_jobs#create
+                   new_admin_settings_monitoring_delayed_job GET    /admin/settings/monitoring/delayed_jobs/new(.:format)                                   admin/settings/monitoring/delayed_jobs#new
+                  edit_admin_settings_monitoring_delayed_job GET    /admin/settings/monitoring/delayed_jobs/:id/edit(.:format)                              admin/settings/monitoring/delayed_jobs#edit
+                       admin_settings_monitoring_delayed_job GET    /admin/settings/monitoring/delayed_jobs/:id(.:format)                                   admin/settings/monitoring/delayed_jobs#show
+                                                             PATCH  /admin/settings/monitoring/delayed_jobs/:id(.:format)                                   admin/settings/monitoring/delayed_jobs#update
+                                                             PUT    /admin/settings/monitoring/delayed_jobs/:id(.:format)                                   admin/settings/monitoring/delayed_jobs#update
+                                                             DELETE /admin/settings/monitoring/delayed_jobs/:id(.:format)                                   admin/settings/monitoring/delayed_jobs#destroy
+                            admin_settings_monitoring_status GET    /admin/settings/monitoring/status(.:format)                                             admin/settings/monitoring/status#index
+                              admin_settings_monitoring_root GET    /admin/settings/monitoring(.:format)                                                    admin/settings/monitoring/status#index
+                                                  apply_root GET    /apply(.:format)                                                                        apply/sessions#new
+                                    apply_applicant_register GET    /apply/register(.:format)                                                               apply/cycle_applications#new
+                                      apply_applicant_create POST   /apply/apply/register(.:format)                                                         apply/cycle_applications#create
+                                              apply_overview GET    /apply/overview(.:format)                                                               apply/overview#index
+                                                apply_status GET    /apply/overview/status(.:format)                                                        apply/overview#status
+                                                apply_submit GET    /apply/submit(.:format)                                                                 apply/overview#submit
+                                              apply_withdraw GET    /apply/withdraw(.:format)                                                               apply/overview#withdraw
+                                                apply_thanks GET    /apply/thank_you(.:format)                                                              apply/overview#thank_you
+                                              apply_sessions GET    /apply/sessions(.:format)                                                               apply/sessions#index
+                                                             POST   /apply/sessions(.:format)                                                               apply/sessions#create
+                                           new_apply_session GET    /apply/sessions/new(.:format)                                                           apply/sessions#new
+                                          edit_apply_session GET    /apply/sessions/:id/edit(.:format)                                                      apply/sessions#edit
+                                               apply_session GET    /apply/sessions/:id(.:format)                                                           apply/sessions#show
+                                                             PATCH  /apply/sessions/:id(.:format)                                                           apply/sessions#update
+                                                             PUT    /apply/sessions/:id(.:format)                                                           apply/sessions#update
+                                                             DELETE /apply/sessions/:id(.:format)                                                           apply/sessions#destroy
+                         demographic_apply_cycle_application GET    /apply/cycle_applications/:id/demographic(.:format)                                     apply/cycle_applications#demographic
+                             contact_apply_cycle_application GET    /apply/cycle_applications/:id/contact(.:format)                                         apply/cycle_applications#contact
+                       delete_apply_cycle_application_school GET    /apply/cycle_applications/:cycle_application_id/schools/:id/delete(.:format)            apply/schools#delete
+            verify_transcript_apply_cycle_application_school GET    /apply/cycle_applications/:cycle_application_id/schools/:id/verify_transcript(.:format) apply/schools#verify_transcript
+                             apply_cycle_application_schools GET    /apply/cycle_applications/:cycle_application_id/schools(.:format)                       apply/schools#index
+                                                             POST   /apply/cycle_applications/:cycle_application_id/schools(.:format)                       apply/schools#create
+                          new_apply_cycle_application_school GET    /apply/cycle_applications/:cycle_application_id/schools/new(.:format)                   apply/schools#new
+                         edit_apply_cycle_application_school GET    /apply/cycle_applications/:cycle_application_id/schools/:id/edit(.:format)              apply/schools#edit
+                              apply_cycle_application_school GET    /apply/cycle_applications/:cycle_application_id/schools/:id(.:format)                   apply/schools#show
+                                                             PATCH  /apply/cycle_applications/:cycle_application_id/schools/:id(.:format)                   apply/schools#update
+                                                             PUT    /apply/cycle_applications/:cycle_application_id/schools/:id(.:format)                   apply/schools#update
+                                                             DELETE /apply/cycle_applications/:cycle_application_id/schools/:id(.:format)                   apply/schools#destroy
+                          delete_apply_cycle_application_gre GET    /apply/cycle_applications/:cycle_application_id/gres/:id/delete(.:format)               apply/gres#delete
+                                apply_cycle_application_gres GET    /apply/cycle_applications/:cycle_application_id/gres(.:format)                          apply/gres#index
+                                                             POST   /apply/cycle_applications/:cycle_application_id/gres(.:format)                          apply/gres#create
+                             new_apply_cycle_application_gre GET    /apply/cycle_applications/:cycle_application_id/gres/new(.:format)                      apply/gres#new
+                            edit_apply_cycle_application_gre GET    /apply/cycle_applications/:cycle_application_id/gres/:id/edit(.:format)                 apply/gres#edit
+                                 apply_cycle_application_gre GET    /apply/cycle_applications/:cycle_application_id/gres/:id(.:format)                      apply/gres#show
+                                                             PATCH  /apply/cycle_applications/:cycle_application_id/gres/:id(.:format)                      apply/gres#update
+                                                             PUT    /apply/cycle_applications/:cycle_application_id/gres/:id(.:format)                      apply/gres#update
+                                                             DELETE /apply/cycle_applications/:cycle_application_id/gres/:id(.:format)                      apply/gres#destroy
+             send_reminder_apply_cycle_application_reference PUT    /apply/cycle_applications/:cycle_application_id/references/:id/send_reminder(.:format)  apply/references#send_reminder
+                    delete_apply_cycle_application_reference GET    /apply/cycle_applications/:cycle_application_id/references/:id/delete(.:format)         apply/references#delete
+                          apply_cycle_application_references GET    /apply/cycle_applications/:cycle_application_id/references(.:format)                    apply/references#index
+                                                             POST   /apply/cycle_applications/:cycle_application_id/references(.:format)                    apply/references#create
+                       new_apply_cycle_application_reference GET    /apply/cycle_applications/:cycle_application_id/references/new(.:format)                apply/references#new
+                      edit_apply_cycle_application_reference GET    /apply/cycle_applications/:cycle_application_id/references/:id/edit(.:format)           apply/references#edit
+                           apply_cycle_application_reference GET    /apply/cycle_applications/:cycle_application_id/references/:id(.:format)                apply/references#show
+                                                             PATCH  /apply/cycle_applications/:cycle_application_id/references/:id(.:format)                apply/references#update
+                                                             PUT    /apply/cycle_applications/:cycle_application_id/references/:id(.:format)                apply/references#update
+                                                             DELETE /apply/cycle_applications/:cycle_application_id/references/:id(.:format)                apply/references#destroy
+                         none_apply_cycle_application_awards PUT    /apply/cycle_applications/:cycle_application_id/awards/none(.:format)                   apply/awards#none
+                        delete_apply_cycle_application_award GET    /apply/cycle_applications/:cycle_application_id/awards/:id/delete(.:format)             apply/awards#delete
+                              apply_cycle_application_awards GET    /apply/cycle_applications/:cycle_application_id/awards(.:format)                        apply/awards#index
+                                                             POST   /apply/cycle_applications/:cycle_application_id/awards(.:format)                        apply/awards#create
+                           new_apply_cycle_application_award GET    /apply/cycle_applications/:cycle_application_id/awards/new(.:format)                    apply/awards#new
+                          edit_apply_cycle_application_award GET    /apply/cycle_applications/:cycle_application_id/awards/:id/edit(.:format)               apply/awards#edit
+                               apply_cycle_application_award GET    /apply/cycle_applications/:cycle_application_id/awards/:id(.:format)                    apply/awards#show
+                                                             PATCH  /apply/cycle_applications/:cycle_application_id/awards/:id(.:format)                    apply/awards#update
+                                                             PUT    /apply/cycle_applications/:cycle_application_id/awards/:id(.:format)                    apply/awards#update
+                                                             DELETE /apply/cycle_applications/:cycle_application_id/awards/:id(.:format)                    apply/awards#destroy
+        no_publications_apply_cycle_application_publications PUT    /apply/cycle_applications/:cycle_application_id/publications/no_publications(.:format)  apply/publications#no_publications
+                  delete_apply_cycle_application_publication GET    /apply/cycle_applications/:cycle_application_id/publications/:id/delete(.:format)       apply/publications#delete
+                        apply_cycle_application_publications GET    /apply/cycle_applications/:cycle_application_id/publications(.:format)                  apply/publications#index
+                                                             POST   /apply/cycle_applications/:cycle_application_id/publications(.:format)                  apply/publications#create
+                     new_apply_cycle_application_publication GET    /apply/cycle_applications/:cycle_application_id/publications/new(.:format)              apply/publications#new
+                    edit_apply_cycle_application_publication GET    /apply/cycle_applications/:cycle_application_id/publications/:id/edit(.:format)         apply/publications#edit
+                         apply_cycle_application_publication GET    /apply/cycle_applications/:cycle_application_id/publications/:id(.:format)              apply/publications#show
+                                                             PATCH  /apply/cycle_applications/:cycle_application_id/publications/:id(.:format)              apply/publications#update
+                                                             PUT    /apply/cycle_applications/:cycle_application_id/publications/:id(.:format)              apply/publications#update
+                                                             DELETE /apply/cycle_applications/:cycle_application_id/publications/:id(.:format)              apply/publications#destroy
+                        none_apply_cycle_application_patents PUT    /apply/cycle_applications/:cycle_application_id/patents/none(.:format)                  apply/patents#none
+                       delete_apply_cycle_application_patent GET    /apply/cycle_applications/:cycle_application_id/patents/:id/delete(.:format)            apply/patents#delete
+                             apply_cycle_application_patents GET    /apply/cycle_applications/:cycle_application_id/patents(.:format)                       apply/patents#index
+                                                             POST   /apply/cycle_applications/:cycle_application_id/patents(.:format)                       apply/patents#create
+                          new_apply_cycle_application_patent GET    /apply/cycle_applications/:cycle_application_id/patents/new(.:format)                   apply/patents#new
+                         edit_apply_cycle_application_patent GET    /apply/cycle_applications/:cycle_application_id/patents/:id/edit(.:format)              apply/patents#edit
+                              apply_cycle_application_patent GET    /apply/cycle_applications/:cycle_application_id/patents/:id(.:format)                   apply/patents#show
+                                                             PATCH  /apply/cycle_applications/:cycle_application_id/patents/:id(.:format)                   apply/patents#update
+                                                             PUT    /apply/cycle_applications/:cycle_application_id/patents/:id(.:format)                   apply/patents#update
+                                                             DELETE /apply/cycle_applications/:cycle_application_id/patents/:id(.:format)                   apply/patents#destroy
+        no_professional_apply_cycle_application_professional PUT    /apply/cycle_applications/:cycle_application_id/professional/no_professional(.:format)  apply/professionals#no_professional
+                get_pdf_apply_cycle_application_professional GET    /apply/cycle_applications/:cycle_application_id/professional/get_pdf(.:format)          apply/professionals#get_pdf
+                        apply_cycle_application_professional POST   /apply/cycle_applications/:cycle_application_id/professional(.:format)                  apply/professionals#create
+                    new_apply_cycle_application_professional GET    /apply/cycle_applications/:cycle_application_id/professional/new(.:format)              apply/professionals#new
+                   edit_apply_cycle_application_professional GET    /apply/cycle_applications/:cycle_application_id/professional/edit(.:format)             apply/professionals#edit
+                                                             GET    /apply/cycle_applications/:cycle_application_id/professional(.:format)                  apply/professionals#show
+                                                             PATCH  /apply/cycle_applications/:cycle_application_id/professional(.:format)                  apply/professionals#update
+                                                             PUT    /apply/cycle_applications/:cycle_application_id/professional(.:format)                  apply/professionals#update
+                                                             DELETE /apply/cycle_applications/:cycle_application_id/professional(.:format)                  apply/professionals#destroy
+               academic_status_apply_cycle_application_study GET    /apply/cycle_applications/:cycle_application_id/study/academic_status(.:format)         apply/studies#academic_status
+                                                             PUT    /apply/cycle_applications/:cycle_application_id/study/academic_status(.:format)         apply/studies#academic_status
+                               apply_cycle_application_study POST   /apply/cycle_applications/:cycle_application_id/study(.:format)                         apply/studies#create
+                           new_apply_cycle_application_study GET    /apply/cycle_applications/:cycle_application_id/study/new(.:format)                     apply/studies#new
+                          edit_apply_cycle_application_study GET    /apply/cycle_applications/:cycle_application_id/study/edit(.:format)                    apply/studies#edit
+                                                             GET    /apply/cycle_applications/:cycle_application_id/study(.:format)                         apply/studies#show
+                                                             PATCH  /apply/cycle_applications/:cycle_application_id/study(.:format)                         apply/studies#update
+                                                             PUT    /apply/cycle_applications/:cycle_application_id/study(.:format)                         apply/studies#update
+                                                             DELETE /apply/cycle_applications/:cycle_application_id/study(.:format)                         apply/studies#destroy
+                  delete_apply_cycle_application_high_school GET    /apply/cycle_applications/:cycle_application_id/high_schools/:id/delete(.:format)       apply/high_schools#delete
+                        apply_cycle_application_high_schools GET    /apply/cycle_applications/:cycle_application_id/high_schools(.:format)                  apply/high_schools#index
+                                                             POST   /apply/cycle_applications/:cycle_application_id/high_schools(.:format)                  apply/high_schools#create
+                     new_apply_cycle_application_high_school GET    /apply/cycle_applications/:cycle_application_id/high_schools/new(.:format)              apply/high_schools#new
+                    edit_apply_cycle_application_high_school GET    /apply/cycle_applications/:cycle_application_id/high_schools/:id/edit(.:format)         apply/high_schools#edit
+                         apply_cycle_application_high_school GET    /apply/cycle_applications/:cycle_application_id/high_schools/:id(.:format)              apply/high_schools#show
+                                                             PATCH  /apply/cycle_applications/:cycle_application_id/high_schools/:id(.:format)              apply/high_schools#update
+                                                             PUT    /apply/cycle_applications/:cycle_application_id/high_schools/:id(.:format)              apply/high_schools#update
+                                                             DELETE /apply/cycle_applications/:cycle_application_id/high_schools/:id(.:format)              apply/high_schools#destroy
+                                    apply_cycle_applications GET    /apply/cycle_applications(.:format)                                                     apply/cycle_applications#index
+                                                             POST   /apply/cycle_applications(.:format)                                                     apply/cycle_applications#create
+                                 new_apply_cycle_application GET    /apply/cycle_applications/new(.:format)                                                 apply/cycle_applications#new
+                                edit_apply_cycle_application GET    /apply/cycle_applications/:id/edit(.:format)                                            apply/cycle_applications#edit
+                                     apply_cycle_application GET    /apply/cycle_applications/:id(.:format)                                                 apply/cycle_applications#show
+                                                             PATCH  /apply/cycle_applications/:id(.:format)                                                 apply/cycle_applications#update
+                                                             PUT    /apply/cycle_applications/:id(.:format)                                                 apply/cycle_applications#update
+                                                             DELETE /apply/cycle_applications/:id(.:format)                                                 apply/cycle_applications#destroy
+                                       apply_forgot_password GET    /apply/forgot_password(.:format)                                                        apply/applicant_password_reset_requests#new
+                                   apply_reset_password_form GET    /apply/reset_password_form/:key(.:format)                                               apply/applicant_password_reset_requests#reset_password_form
+                                        apply_reset_password GET    /apply/reset_password(.:format)                                                         apply/applicant_password_reset_requests#reset_password
+                      apply_applicant_password_reset_request POST   /apply/applicant_password_reset_request(.:format)                                       apply/applicant_password_reset_requests#create
+                  new_apply_applicant_password_reset_request GET    /apply/applicant_password_reset_request/new(.:format)                                   apply/applicant_password_reset_requests#new
+                 edit_apply_applicant_password_reset_request GET    /apply/applicant_password_reset_request/edit(.:format)                                  apply/applicant_password_reset_requests#edit
+                                                             GET    /apply/applicant_password_reset_request(.:format)                                       apply/applicant_password_reset_requests#show
+                                                             PATCH  /apply/applicant_password_reset_request(.:format)                                       apply/applicant_password_reset_requests#update
+                                                             PUT    /apply/applicant_password_reset_request(.:format)                                       apply/applicant_password_reset_requests#update
+                                                             DELETE /apply/applicant_password_reset_request(.:format)                                       apply/applicant_password_reset_requests#destroy
+                                  apply_notification_request POST   /apply/notification_request(.:format)                                                   apply/notification_requests#create
+                              new_apply_notification_request GET    /apply/notification_request/new(.:format)                                               apply/notification_requests#new
+                             edit_apply_notification_request GET    /apply/notification_request/edit(.:format)                                              apply/notification_requests#edit
+                                                             GET    /apply/notification_request(.:format)                                                   apply/notification_requests#show
+                                                             PATCH  /apply/notification_request(.:format)                                                   apply/notification_requests#update
+                                                             PUT    /apply/notification_request(.:format)                                                   apply/notification_requests#update
+                                                             DELETE /apply/notification_request(.:format)                                                   apply/notification_requests#destroy
+                                     public_reference_closed GET    /reference/closed(.:format)                                                             apply/references#public_reference_closed
+                                       public_reference_edit GET    /reference/:password(.:format)                                                          apply/references#public_reference_edit
+                                     public_reference_update PUT    /reference/:password(.:format)                                                          apply/references#public_reference_update
+                                            applicant_logout GET    /apply/logout(.:format)                                                                 apply/sessions#destroy
+                                  with_gres_admin_applicants GET    /admin/persistent_applicants/with_gres/:filter(.:format)                                admin/persistent_applicants#with_gres {:filter=>"all"}
+                                                             GET    /                                                                                       cycle#edit
+                                         admin_global_search GET    /admin/search.js(.:format)                                                              admin/navigation#search
+                          search_admin_persistent_applicants GET    /admin/persistent_applicants/search(.:format)                                           admin/persistent_applicants#search
+                      filterable_admin_persistent_applicants GET    /admin/persistent_applicants/filterable(.:format)                                       admin/persistent_applicants#filterable
+                            login_admin_persistent_applicant GET    /admin/persistent_applicants/:id/login(.:format)                                        admin/persistent_applicants#login
+                         comments_admin_persistent_applicant GET    /admin/persistent_applicants/:id/comments(.:format)                                     admin/persistent_applicants#comments
+                      add_comment_admin_persistent_applicant POST   /admin/persistent_applicants/:id/add_comment(.:format)                                  admin/persistent_applicants#add_comment
+                      begin_merge_admin_persistent_applicant GET    /admin/persistent_applicants/:id/begin_merge(.:format)                                  admin/persistent_applicants#begin_merge
+                    confirm_merge_admin_persistent_applicant GET    /admin/persistent_applicants/:id/confirm_merge(.:format)                                admin/persistent_applicants#confirm_merge
+                    perform_merge_admin_persistent_applicant PUT    /admin/persistent_applicants/:id/perform_merge(.:format)                                admin/persistent_applicants#perform_merge
+                                 admin_persistent_applicants GET    /admin/persistent_applicants(.:format)                                                  admin/persistent_applicants#index
+                                                             POST   /admin/persistent_applicants(.:format)                                                  admin/persistent_applicants#create
+                              new_admin_persistent_applicant GET    /admin/persistent_applicants/new(.:format)                                              admin/persistent_applicants#new
+                             edit_admin_persistent_applicant GET    /admin/persistent_applicants/:id/edit(.:format)                                         admin/persistent_applicants#edit
+                                  admin_persistent_applicant GET    /admin/persistent_applicants/:id(.:format)                                              admin/persistent_applicants#show
+                                                             PATCH  /admin/persistent_applicants/:id(.:format)                                              admin/persistent_applicants#update
+                                                             PUT    /admin/persistent_applicants/:id(.:format)                                              admin/persistent_applicants#update
+                                                             DELETE /admin/persistent_applicants/:id(.:format)                                              admin/persistent_applicants#destroy
+                                        admin_settings_cycle POST   /admin/settings/cycle(.:format)                                                         admin/settings/cycles#create
+                                    new_admin_settings_cycle GET    /admin/settings/cycle/new(.:format)                                                     admin/settings/cycles#new
+                                   edit_admin_settings_cycle GET    /admin/settings/cycle/edit(.:format)                                                    admin/settings/cycles#edit
+                                                             GET    /admin/settings/cycle(.:format)                                                         admin/settings/cycles#show
+                                                             PATCH  /admin/settings/cycle(.:format)                                                         admin/settings/cycles#update
+                                                             PUT    /admin/settings/cycle(.:format)                                                         admin/settings/cycles#update
+                                                             DELETE /admin/settings/cycle(.:format)                                                         admin/settings/cycles#destroy
+                            admin_settings_monitoring_cycles GET    /admin/settings/monitoring/cycles.:format                                               admin/settings/monitoring/status#cycles
+                        count_admin_apply_cycle_applications GET    /admin/apply/cycle_applications/count(.:format)                                         admin/apply/cycle_applications#count
+      count_started_over_time_admin_apply_cycle_applications GET    /admin/apply/cycle_applications/count_started_over_time(.:format)                       admin/apply/cycle_applications#count_started_over_time
+    count_submitted_over_time_admin_apply_cycle_applications GET    /admin/apply/cycle_applications/count_submitted_over_time(.:format)                     admin/apply/cycle_applications#count_submitted_over_time
+                   filterable_admin_apply_cycle_applications GET    /admin/apply/cycle_applications/filterable(.:format)                                    admin/apply/cycle_applications#filterable
+                   incomplete_admin_apply_cycle_applications GET    /admin/apply/cycle_applications/incomplete(.:format)                                    admin/apply/cycle_applications#incomplete
+                    submitted_admin_apply_cycle_applications GET    /admin/apply/cycle_applications/submitted(.:format)                                     admin/apply/cycle_applications#submitted
+          missing_transcripts_admin_apply_cycle_applications GET    /admin/apply/cycle_applications/missing_transcripts(.:format)                           admin/apply/cycle_applications#missing_transcripts
+                 missing_gres_admin_apply_cycle_applications GET    /admin/apply/cycle_applications/missing_gres(.:format)                                  admin/apply/cycle_applications#missing_gres
+                       search_admin_apply_cycle_applications GET    /admin/apply/cycle_applications/search(.:format)                                        admin/apply/cycle_applications#search
+           missing_references_admin_apply_cycle_applications GET    /admin/apply/cycle_applications/missing_references(.:format)                            admin/apply/cycle_applications#missing_references
+                    withdrawn_admin_apply_cycle_applications GET    /admin/apply/cycle_applications/withdrawn(.:format)                                     admin/apply/cycle_applications#withdrawn
+          school_distribution_admin_apply_cycle_applications GET    /admin/apply/cycle_applications/school_distribution(.:format)                           admin/apply/cycle_applications#school_distribution
+attending_school_distribution_admin_apply_cycle_applications GET    /admin/apply/cycle_applications/attending_school_distribution(.:format)                 admin/apply/cycle_applications#attending_school_distribution
+           schedule_print_run_admin_apply_cycle_applications GET    /admin/apply/cycle_applications/schedule_print_run(.:format)                            admin/apply/cycle_applications#schedule_print_run
+             cancel_print_run_admin_apply_cycle_applications GET    /admin/apply/cycle_applications/cancel_print_run(.:format)                              admin/apply/cycle_applications#cancel_print_run
+                    printable_admin_apply_cycle_applications GET    /admin/apply/cycle_applications/printable(.:format)                                     admin/apply/cycle_applications#printable
+            refresh_printable_admin_apply_cycle_applications GET    /admin/apply/cycle_applications/refresh_printable(.:format)                             admin/apply/cycle_applications#refresh_printable
+                     complete_admin_apply_cycle_applications GET    /admin/apply/cycle_applications/complete(.:format)                                      admin/apply/cycle_applications#complete
+             refresh_complete_admin_apply_cycle_applications GET    /admin/apply/cycle_applications/refresh_complete(.:format)                              admin/apply/cycle_applications#refresh_complete
+                   add_comment_admin_apply_cycle_application POST   /admin/apply/cycle_applications/:id/add_comment(.:format)                               admin/apply/cycle_applications#add_comment
+                    match_gres_admin_apply_cycle_application GET    /admin/apply/cycle_applications/:id/match_gres(.:format)                                admin/apply/cycle_applications#match_gres
+                   update_gres_admin_apply_cycle_application POST   /admin/apply/cycle_applications/:id/update_gres(.:format)                               admin/apply/cycle_applications#update_gres
+                     reinstate_admin_apply_cycle_application PUT    /admin/apply/cycle_applications/:id/reinstate(.:format)                                 admin/apply/cycle_applications#reinstate
+                         login_admin_apply_cycle_application GET    /admin/apply/cycle_applications/:id/login(.:format)                                     admin/apply/cycle_applications#login
+                      unsubmit_admin_apply_cycle_application PUT    /admin/apply/cycle_applications/:id/unsubmit(.:format)                                  admin/apply/cycle_applications#unsubmit
+   submit_after_program_closed_admin_apply_cycle_application PUT    /admin/apply/cycle_applications/:id/submit_after_program_closed(.:format)               admin/apply/cycle_applications#submit_after_program_closed
+            get_transcript_pdf_admin_apply_cycle_application GET    /admin/apply/cycle_applications/:id/get_transcript_pdf(.:format)                        admin/apply/cycle_applications#get_transcript_pdf
+                  generate_pdf_admin_apply_cycle_application GET    /admin/apply/cycle_applications/:id/generate_pdf(.:format)                              admin/apply/cycle_applications#generate_pdf
+                              admin_apply_cycle_applications GET    /admin/apply/cycle_applications(.:format)                                               admin/apply/cycle_applications#index
+                               admin_apply_cycle_application GET    /admin/apply/cycle_applications/:id(.:format)                                           admin/apply/cycle_applications#show
+                                 admin_notification_requests GET    /admin/notification_requests(.:format)                                                  admin/notification_requests#index
+                                                             POST   /admin/notification_requests(.:format)                                                  admin/notification_requests#create
+                              new_admin_notification_request GET    /admin/notification_requests/new(.:format)                                              admin/notification_requests#new
+                             edit_admin_notification_request GET    /admin/notification_requests/:id/edit(.:format)                                         admin/notification_requests#edit
+                                  admin_notification_request GET    /admin/notification_requests/:id(.:format)                                              admin/notification_requests#show
+                                                             PATCH  /admin/notification_requests/:id(.:format)                                              admin/notification_requests#update
+                                                             PUT    /admin/notification_requests/:id(.:format)                                              admin/notification_requests#update
+                                                             DELETE /admin/notification_requests/:id(.:format)                                              admin/notification_requests#destroy
+                                     search_admin_references GET    /admin/references/search(.:format)                                                      admin/references#search
+                               send_reminder_admin_reference POST   /admin/references/:id/send_reminder(.:format)                                           admin/references#send_reminder
+                                            admin_references GET    /admin/references(.:format)                                                             admin/references#index
+                                                             POST   /admin/references(.:format)                                                             admin/references#create
+                                         new_admin_reference GET    /admin/references/new(.:format)                                                         admin/references#new
+                                        edit_admin_reference GET    /admin/references/:id/edit(.:format)                                                    admin/references#edit
+                                             admin_reference GET    /admin/references/:id(.:format)                                                         admin/references#show
+                                                             PATCH  /admin/references/:id(.:format)                                                         admin/references#update
+                                                             PUT    /admin/references/:id(.:format)                                                         admin/references#update
+                                                             DELETE /admin/references/:id(.:format)                                                         admin/references#destroy
+                            admin_current_cycle_applications GET    /admin/current_cycle_applications(.:format)                                             admin/apply/cycle_applications#index
+                                    applicant_transcript_pdf GET    /applicants/transcript/*filename(.:format)                                              admin/persistent_applicants#get_transcript_pdf
+                                         resource_applicants GET    /resource/applicants(.:format)                                                          resource/applicants#index
+                                                             POST   /resource/applicants(.:format)                                                          resource/applicants#create
+                                      new_resource_applicant GET    /resource/applicants/new(.:format)                                                      resource/applicants#new
+                                     edit_resource_applicant GET    /resource/applicants/:id/edit(.:format)                                                 resource/applicants#edit
+                                          resource_applicant GET    /resource/applicants/:id(.:format)                                                      resource/applicants#show
+                                                             PATCH  /resource/applicants/:id(.:format)                                                      resource/applicants#update
+                                                             PUT    /resource/applicants/:id(.:format)                                                      resource/applicants#update
+                                                             DELETE /resource/applicants/:id(.:format)                                                      resource/applicants#destroy
+                                          get_resource_cycle GET    /resource/cycle/get(.:format)                                                           resource/cycles#get
+                                              resource_cycle POST   /resource/cycle(.:format)                                                               resource/cycles#create
+                                          new_resource_cycle GET    /resource/cycle/new(.:format)                                                           resource/cycles#new
+                                         edit_resource_cycle GET    /resource/cycle/edit(.:format)                                                          resource/cycles#edit
+                                                             GET    /resource/cycle(.:format)                                                               resource/cycles#show
+                                                             PATCH  /resource/cycle(.:format)                                                               resource/cycles#update
+                                                             PUT    /resource/cycle(.:format)                                                               resource/cycles#update
+                                                             DELETE /resource/cycle(.:format)                                                               resource/cycles#destroy

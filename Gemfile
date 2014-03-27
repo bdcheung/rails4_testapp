@@ -67,9 +67,9 @@ group :development, :test do
 end
 
 
-gem 'admin', :git => 'git@git.asee.org:plugins/admin.git', :branch => :rails4
+# gem 'admin', :git => 'git@git.asee.org:plugins/admin.git', :branch => :rails4
 gem 'apply', path: "../apply-rails4"
-#gem 'admin', :path => '../admin'
+gem 'admin', :path => '../admin-rails4'
 
 gem 'deploy', :git => 'git@git.asee.org:gems/deploy.git', :branch => :realgem
 gem "authenticated_system", :git => 'git@git.asee.org:gems/authenticated_system.git', :branch => :master

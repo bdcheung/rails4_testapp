@@ -29,24 +29,6 @@ GIT
       capistrano (>= 2.11)
 
 GIT
-  remote: git@git.asee.org:plugins/admin.git
-  revision: f3e5757cdd8249ab9648eb9b4d699a40bcf5722e
-  branch: rails4
-  specs:
-    admin (1.0.0)
-      activeresource
-      calendar_date_select (= 1.16.2)
-      haml-rails
-      log4r
-      make_resourceful
-      newrelic_rpm
-      pdf-toolkit
-      rails (>= 4.0.0)
-      rake (= 10.1.1)
-      simple-navigation (= 3.11.0)
-      will_paginate (~> 3.0)
-
-GIT
   remote: https://github.com/asee/make_resourceful
   revision: c82daf8e4a3b5ec370ca584c533191315a745cb9
   specs:
@@ -62,9 +44,26 @@ GIT
       activesupport (>= 3.2)
 
 PATH
+  remote: ../admin-rails4
+  specs:
+    admin (1.0.0)
+      activeresource
+      calendar_date_select (= 1.16.2)
+      haml-rails
+      log4r
+      make_resourceful
+      newrelic_rpm
+      pdf-toolkit
+      rails (>= 4.0.0)
+      rake (= 10.1.1)
+      simple-navigation (= 3.11.0)
+      will_paginate (~> 3.0)
+
+PATH
   remote: ../apply-rails4
   specs:
     apply (1.0.0)
+      rails (~> 4.0.0)
 
 GEM
   remote: https://rubygems.org/
