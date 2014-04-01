@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140107164756) do
+ActiveRecord::Schema.define(version: 20140331184351) do
 
   create_table "addresses", force: true do |t|
     t.string   "street_line1"
@@ -29,16 +29,6 @@ ActiveRecord::Schema.define(version: 20140107164756) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  create_table "ads_applicants", id: false, force: true do |t|
-    t.integer  "applicant_id"
-    t.integer  "ad_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "ads_applicants", ["ad_id"], name: "index_ads_applicants_on_ad_id", using: :btree
-  add_index "ads_applicants", ["applicant_id"], name: "index_ads_applicants_on_applicant_id", using: :btree
 
   create_table "ads_cycle_applications", id: false, force: true do |t|
     t.integer  "cycle_application_id"
@@ -61,83 +51,6 @@ ActiveRecord::Schema.define(version: 20140107164756) do
 
   add_index "applicant_password_reset_requests", ["key"], name: "index_applicant_password_reset_requests_on_key", using: :btree
 
-  create_table "applicants", force: true do |t|
-    t.string   "first_name"
-    t.string   "middle_name"
-    t.string   "last_name"
-    t.string   "suffix"
-    t.string   "other_name"
-    t.string   "resident_state"
-    t.string   "email"
-    t.string   "citizen"
-    t.string   "selective_service"
-    t.boolean  "veteran"
-    t.string   "birth_city"
-    t.string   "birth_state"
-    t.string   "birth_country"
-    t.date     "birth_date"
-    t.boolean  "decline_dob"
-    t.string   "gender"
-    t.string   "ethnicity"
-    t.string   "disability"
-    t.string   "crypted_password"
-    t.boolean  "same_as_addr_1"
-    t.string   "telephone_1"
-    t.string   "telephone_2"
-    t.string   "telephone_3"
-    t.boolean  "privacy"
-    t.string   "salt"
-    t.boolean  "sharing"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.boolean  "no_patents"
-    t.boolean  "no_leaderships"
-    t.boolean  "no_teamworks"
-    t.boolean  "no_researches"
-    t.boolean  "no_memberships"
-    t.boolean  "no_publications"
-    t.boolean  "no_awards"
-    t.boolean  "no_professionals"
-    t.boolean  "no_volunteers"
-    t.boolean  "no_gres"
-    t.boolean  "no_certifications"
-    t.boolean  "no_explanation"
-    t.boolean  "no_leadership"
-    t.boolean  "no_teamwork"
-    t.boolean  "no_research"
-    t.boolean  "no_membership"
-    t.boolean  "no_volunteer"
-    t.integer  "resource_applicant_id"
-    t.boolean  "submitted"
-    t.datetime "submitted_at"
-    t.boolean  "withdrawn"
-    t.datetime "withdrawn_at"
-    t.integer  "primary_address_id"
-    t.integer  "secondary_address_id"
-  end
-
-  add_index "applicants", ["created_at"], name: "index_applicants_on_created_at", using: :btree
-  add_index "applicants", ["ethnicity"], name: "index_applicants_on_ethnicity", using: :btree
-  add_index "applicants", ["gender"], name: "index_applicants_on_gender", using: :btree
-  add_index "applicants", ["submitted"], name: "index_applicants_on_submitted", using: :btree
-  add_index "applicants", ["updated_at"], name: "index_applicants_on_updated_at", using: :btree
-  add_index "applicants", ["withdrawn"], name: "index_applicants_on_withdrawn", using: :btree
-
-if ViewsInMigrations.use_views?(current_database)
-  #############################################################
-  # Warning: SchemaDumper cannot determine view dependencies! #
-  #   You may have to manually reorder your views to run      #
-  # `rake db:schema:load` successfully.                       #
-  #############################################################
-
-  create_view "applicants_applicants", %{
-    SELECT * 
-    FROM `#{applicants_database_name}`.`applicants` 
-    WHERE (`#{applicants_database_name}`.`applicants`.`program_id` = #{applicants_program_id})
-  }, :force => true
-
-else
-
   create_table "applicants_applicants", id: false, force: true do |t|
     t.integer  "id",               default: 0,     null: false
     t.string   "first_name"
@@ -155,23 +68,6 @@ else
     t.integer  "program_id"
   end
 
-end
-
-if ViewsInMigrations.use_views?(current_database)
-  #############################################################
-  # Warning: SchemaDumper cannot determine view dependencies! #
-  #   You may have to manually reorder your views to run      #
-  # `rake db:schema:load` successfully.                       #
-  #############################################################
-
-  create_view "applicants_comments", %{
-    SELECT * 
-    FROM `#{applicants_database_name}`.`comments` 
-    WHERE (`#{applicants_database_name}`.`comments`.`program_id` = #{applicants_program_id})
-  }, :force => true
-
-else
-
   create_table "applicants_comments", id: false, force: true do |t|
     t.integer  "id",               default: 0, null: false
     t.integer  "applicant_id"
@@ -183,23 +79,6 @@ else
     t.datetime "updated_at"
     t.integer  "program_id"
   end
-
-end
-
-if ViewsInMigrations.use_views?(current_database)
-  #############################################################
-  # Warning: SchemaDumper cannot determine view dependencies! #
-  #   You may have to manually reorder your views to run      #
-  # `rake db:schema:load` successfully.                       #
-  #############################################################
-
-  create_view "applicants_gpa_checks", %{
-    SELECT * 
-    FROM `#{applicants_database_name}`.`gpa_checks` 
-    WHERE (`#{applicants_database_name}`.`gpa_checks`.`program_id` = #{applicants_program_id})
-  }, :force => true
-
-else
 
   create_table "applicants_gpa_checks", id: false, force: true do |t|
     t.integer  "id",                                     default: 0,     null: false
@@ -216,23 +95,6 @@ else
     t.datetime "updated_at"
     t.integer  "program_id"
   end
-
-end
-
-if ViewsInMigrations.use_views?(current_database)
-  #############################################################
-  # Warning: SchemaDumper cannot determine view dependencies! #
-  #   You may have to manually reorder your views to run      #
-  # `rake db:schema:load` successfully.                       #
-  #############################################################
-
-  create_view "applicants_gres", %{
-    SELECT * 
-    FROM `#{applicants_database_name}`.`gres` 
-    WHERE (`#{applicants_database_name}`.`gres`.`program_id` = #{applicants_program_id})
-  }, :force => true
-
-else
 
   create_table "applicants_gres", id: false, force: true do |t|
     t.integer  "id",                 default: 0, null: false
@@ -253,22 +115,6 @@ else
     t.integer  "program_id"
   end
 
-end
-
-if ViewsInMigrations.use_views?(current_database)
-  #############################################################
-  # Warning: SchemaDumper cannot determine view dependencies! #
-  #   You may have to manually reorder your views to run      #
-  # `rake db:schema:load` successfully.                       #
-  #############################################################
-
-  create_view "applicants_people", %{
-    SELECT * 
-    FROM `#{applicants_database_name}`.`people`
-  }, :force => true
-
-else
-
   create_table "applicants_people", id: false, force: true do |t|
     t.integer  "id",                        default: 0, null: false
     t.boolean  "active"
@@ -278,23 +124,6 @@ else
     t.datetime "updated_at"
     t.integer  "merged_into_id"
   end
-
-end
-
-if ViewsInMigrations.use_views?(current_database)
-  #############################################################
-  # Warning: SchemaDumper cannot determine view dependencies! #
-  #   You may have to manually reorder your views to run      #
-  # `rake db:schema:load` successfully.                       #
-  #############################################################
-
-  create_view "applicants_program_cycles", %{
-    SELECT * 
-    FROM `#{applicants_database_name}`.`program_cycles` 
-    WHERE (`#{applicants_database_name}`.`program_cycles`.`program_id` = #{applicants_program_id})
-  }, :force => true
-
-else
 
   create_table "applicants_program_cycles", id: false, force: true do |t|
     t.integer  "id",                default: 0, null: false
@@ -307,56 +136,12 @@ else
     t.datetime "updated_at"
   end
 
-end
-
-if ViewsInMigrations.use_views?(current_database)
-  #############################################################
-  # Warning: SchemaDumper cannot determine view dependencies! #
-  #   You may have to manually reorder your views to run      #
-  # `rake db:schema:load` successfully.                       #
-  #############################################################
-
-  create_view "applicants_programs", %{
-    SELECT * 
-    FROM `#{applicants_database_name}`.`programs` 
-    WHERE (`#{applicants_database_name}`.`programs`.`name` = 'Rails_4_Test_App')
-  }, :force => true
-
-else
-
   create_table "applicants_programs", id: false, force: true do |t|
     t.integer  "id",         default: 0, null: false
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-end
-
-  create_table "applicants_races", id: false, force: true do |t|
-    t.integer  "applicant_id"
-    t.integer  "race_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "applicants_races", ["applicant_id"], name: "applicant_id", using: :btree
-  add_index "applicants_races", ["race_id", "applicant_id"], name: "index_applicants_races_on_race_id_and_applicant_id", using: :btree
-
-if ViewsInMigrations.use_views?(current_database)
-  #############################################################
-  # Warning: SchemaDumper cannot determine view dependencies! #
-  #   You may have to manually reorder your views to run      #
-  # `rake db:schema:load` successfully.                       #
-  #############################################################
-
-  create_view "applicants_schools", %{
-    SELECT * 
-    FROM `#{applicants_database_name}`.`schools` 
-    WHERE (`#{applicants_database_name}`.`schools`.`program_id` = #{applicants_program_id})
-  }, :force => true
-
-else
 
   create_table "applicants_schools", id: false, force: true do |t|
     t.integer  "id",                                                 default: 0, null: false
@@ -408,22 +193,6 @@ else
     t.integer  "transcript_uploaded_pdf_id"
   end
 
-end
-
-if ViewsInMigrations.use_views?(current_database)
-  #############################################################
-  # Warning: SchemaDumper cannot determine view dependencies! #
-  #   You may have to manually reorder your views to run      #
-  # `rake db:schema:load` successfully.                       #
-  #############################################################
-
-  create_view "applicants_scores", %{
-    SELECT * 
-    FROM `#{applicants_database_name}`.`scores`
-  }, :force => true
-
-else
-
   create_table "applicants_scores", id: false, force: true do |t|
     t.integer  "id",                                 default: 0, null: false
     t.string   "ctype"
@@ -462,23 +231,6 @@ else
     t.string   "q_estimated"
   end
 
-end
-
-if ViewsInMigrations.use_views?(current_database)
-  #############################################################
-  # Warning: SchemaDumper cannot determine view dependencies! #
-  #   You may have to manually reorder your views to run      #
-  # `rake db:schema:load` successfully.                       #
-  #############################################################
-
-  create_view "applicants_transcripts", %{
-    SELECT * 
-    FROM `#{applicants_database_name}`.`transcripts` 
-    WHERE (`#{applicants_database_name}`.`transcripts`.`program_id` = #{applicants_program_id})
-  }, :force => true
-
-else
-
   create_table "applicants_transcripts", id: false, force: true do |t|
     t.integer  "id",                              default: 0,     null: false
     t.datetime "received_at"
@@ -504,8 +256,6 @@ else
     t.integer  "program_id"
     t.integer  "person_id"
   end
-
-end
 
   create_table "apply_schools", force: true do |t|
     t.string   "name"
@@ -603,25 +353,17 @@ end
     t.integer  "user_id"
   end
 
+  create_table "configurations", force: true do |t|
+    t.string   "name"
+    t.text     "value"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "countries", force: true do |t|
     t.string  "country"
     t.integer "display_order", default: 9999999
   end
-
-if ViewsInMigrations.use_views?(current_database)
-  #############################################################
-  # Warning: SchemaDumper cannot determine view dependencies! #
-  #   You may have to manually reorder your views to run      #
-  # `rake db:schema:load` successfully.                       #
-  #############################################################
-
-  create_view "current_cycle_applications", %{
-    SELECT * 
-    FROM `rails4_testapp_development`.`applicants_program_cycles` 
-    WHERE (`applicants_program_cycles`.`current` is true))
-  }, :force => true
-
-else
 
   create_table "current_cycle_applications", id: false, force: true do |t|
     t.integer  "id",                      default: 0,     null: false
@@ -683,8 +425,6 @@ else
     t.boolean  "complete",                default: false
   end
 
-end
-
   create_table "cycle_application_versions", force: true do |t|
     t.integer  "cycle_application_id"
     t.integer  "version"
@@ -698,8 +438,8 @@ end
     t.integer  "university_id"
     t.integer  "discipline_id"
     t.boolean  "submitted"
-    t.boolean  "reviewed",                     default: false
-    t.boolean  "awarded",                      default: false
+    t.boolean  "reviewed",                          default: false
+    t.boolean  "awarded",                           default: false
     t.datetime "submitted_at"
     t.string   "middle_name"
     t.string   "suffix"
@@ -743,7 +483,8 @@ end
     t.datetime "withdrawn_at"
     t.integer  "primary_address_id"
     t.integer  "secondary_address_id"
-    t.boolean  "complete",                     default: false
+    t.boolean  "complete",                          default: false
+    t.integer  "versioned_persistent_applicant_id"
   end
 
   add_index "cycle_application_versions", ["cycle_application_id"], name: "index_cycle_application_versions_on_cycle_application_id", using: :btree
@@ -843,6 +584,14 @@ end
 
   add_index "essays", ["cycle_application_id"], name: "index_essays_on_cycle_application_id", using: :btree
 
+  create_table "favorites", force: true do |t|
+    t.string  "title"
+    t.string  "url"
+    t.integer "user_id"
+  end
+
+  add_index "favorites", ["user_id"], name: "index_favorites_on_user_id", using: :btree
+
   create_table "fellowship_locations", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
@@ -887,6 +636,14 @@ end
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "ip_passlists", force: true do |t|
+    t.string "ip"
+    t.string "description"
+    t.date   "expiration"
+  end
+
+  add_index "ip_passlists", ["ip"], name: "index_ip_passlists_on_ip", unique: true, using: :btree
 
   create_table "legacy_applicant_counts", force: true do |t|
     t.string  "application_year"
@@ -1116,6 +873,16 @@ end
 
   add_index "references", ["cycle_application_id"], name: "index_references_on_cycle_application_id", using: :btree
 
+  create_table "sessions", force: true do |t|
+    t.string   "session_id", null: false
+    t.text     "data"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "sessions", ["session_id"], name: "index_sessions_on_session_id", using: :btree
+  add_index "sessions", ["updated_at"], name: "index_sessions_on_updated_at", using: :btree
+
   create_table "states", force: true do |t|
     t.string "state"
     t.string "full_name"
@@ -1150,42 +917,12 @@ end
   add_index "studies", ["discipline_id"], name: "index_studies_on_discipline_id", using: :btree
   add_index "studies", ["university_id"], name: "index_studies_on_university_id", using: :btree
 
-if ViewsInMigrations.use_views?(current_database)
-  #############################################################
-  # Warning: SchemaDumper cannot determine view dependencies! #
-  #   You may have to manually reorder your views to run      #
-  # `rake db:schema:load` successfully.                       #
-  #############################################################
-
-  create_view "universities_aliases", %{
-    SELECT * 
-    FROM `#{universities_database_name}`.`aliases`
-  }, :force => true
-
-else
-
   create_table "universities_aliases", id: false, force: true do |t|
     t.integer "university_id"
     t.string  "incorrect_name", limit: 150
     t.string  "city",           limit: 150
     t.integer "id",                         default: 0, null: false
   end
-
-end
-
-if ViewsInMigrations.use_views?(current_database)
-  #############################################################
-  # Warning: SchemaDumper cannot determine view dependencies! #
-  #   You may have to manually reorder your views to run      #
-  # `rake db:schema:load` successfully.                       #
-  #############################################################
-
-  create_view "universities_bursars", %{
-    SELECT * 
-    FROM `#{universities_database_name}`.`bursars`
-  }, :force => true
-
-else
 
   create_table "universities_bursars", id: false, force: true do |t|
     t.integer  "id",            default: 0, null: false
@@ -1202,22 +939,6 @@ else
     t.datetime "updated_at"
   end
 
-end
-
-if ViewsInMigrations.use_views?(current_database)
-  #############################################################
-  # Warning: SchemaDumper cannot determine view dependencies! #
-  #   You may have to manually reorder your views to run      #
-  # `rake db:schema:load` successfully.                       #
-  #############################################################
-
-  create_view "universities_msi_classification_types", %{
-    SELECT * 
-    FROM `#{universities_database_name}`.`msi_classification_types`
-  }, :force => true
-
-else
-
   create_table "universities_msi_classification_types", id: false, force: true do |t|
     t.integer  "id",           default: 0, null: false
     t.string   "name"
@@ -1226,22 +947,6 @@ else
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-end
-
-if ViewsInMigrations.use_views?(current_database)
-  #############################################################
-  # Warning: SchemaDumper cannot determine view dependencies! #
-  #   You may have to manually reorder your views to run      #
-  # `rake db:schema:load` successfully.                       #
-  #############################################################
-
-  create_view "universities_msi_data_sets", %{
-    SELECT * 
-    FROM `#{universities_database_name}`.`msi_data_sets`
-  }, :force => true
-
-else
 
   create_table "universities_msi_data_sets", id: false, force: true do |t|
     t.integer  "id",                         default: 0, null: false
@@ -1252,22 +957,6 @@ else
     t.datetime "updated_at"
     t.integer  "msi_classification_type_id"
   end
-
-end
-
-if ViewsInMigrations.use_views?(current_database)
-  #############################################################
-  # Warning: SchemaDumper cannot determine view dependencies! #
-  #   You may have to manually reorder your views to run      #
-  # `rake db:schema:load` successfully.                       #
-  #############################################################
-
-  create_view "universities_universities", %{
-    SELECT * 
-    FROM `#{universities_database_name}`.`universities`
-  }, :force => true
-
-else
 
   create_table "universities_universities", id: false, force: true do |t|
     t.integer  "id",                                                                             default: 0,     null: false
@@ -1311,22 +1000,6 @@ else
     t.string   "accounting_name"
   end
 
-end
-
-if ViewsInMigrations.use_views?(current_database)
-  #############################################################
-  # Warning: SchemaDumper cannot determine view dependencies! #
-  #   You may have to manually reorder your views to run      #
-  # `rake db:schema:load` successfully.                       #
-  #############################################################
-
-  create_view "universities_university_msi_classifications", %{
-    SELECT * 
-    FROM `#{universities_database_name}`.`university_msi_classifications`
-  }, :force => true
-
-else
-
   create_table "universities_university_msi_classifications", id: false, force: true do |t|
     t.integer  "id",              default: 0, null: false
     t.integer  "university_id"
@@ -1336,7 +1009,5 @@ else
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-end
 
 end

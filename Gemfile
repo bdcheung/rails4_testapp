@@ -22,25 +22,11 @@ gem 'aasm'
 gem 'authlogic', git: "https://github.com/binarylogic/authlogic", :ref => 'abc09970ed1fad98c6c12f4ca64d1670d37d11db'
 gem 'nokogiri', '1.4.4' # used for the omnifind plugin, does not have to be that version specifically.
 gem 'json'#, :version => '1.4.6'
-# gem 'sunspot_rails'
-# gem 'sunspot_solr'
 gem "pdf-toolkit", "~> 1.0.0.rc1"
 gem 'daemons', '1.0.10'
-# gem 'delayed_job_active_record'
-
-# specific BCMS commit referenced from https://groups.google.com/forum/#!topic/browsercms/dUy41BOfAIY as being rails4 compliant 
-# gem "browsercms", git: "https://github.com/browsermedia/browsercms", :ref => '2298b86c82cca92f049398679bf93bd2d36567ae'
-# gem "browsercms", "4.0.0.alpha"
-# gem "browsercms", :path => '../../browsercms' # for dev
-# gem "browsercms", git: "https://github.com/jamesprior/browsercms" # for now, it has important changes
-
-# gem 'money-rails'
-# gem 'acts_as_versioned', :git => "https://github.com/asee/acts_as_versioned"
-# gem 'acts_as_tree'
-# gem 'activemerchant'
-# gem 'file_column', :path => 'vendor/gems/file_column-0.3.2', :require => 'rails_file_column'
-# gem "rtex", :git => 'https://github.com/asee/rtex'
-# gem "omnifind", :git => 'https://github.com/asee/omnifind'
+gem 'acts_as_versioned', :git => "https://github.com/asee/acts_as_versioned"
+gem 'file_column', :git => 'git@github.com:asee/file_column.git'
+gem "rtex", :git => 'https://github.com/asee/rtex'
 gem 'acts_as_list'
 gem 'rubyzip'
 gem 'dynamic_form' # providing error_messages_for
@@ -68,14 +54,15 @@ end
 
 
 # gem 'admin', :git => 'git@git.asee.org:plugins/admin.git', :branch => :rails4
-gem 'apply', path: "../apply-rails4"
-gem 'admin', :path => '../admin-rails4'
+gem 'apply', path: "../gems/apply-rails4"
+gem 'admin', :path => '../gems/admin-rails4'
+gem 'asee_utilities', :git => 'git@git.asee.org:plugins/asee_utilities.git'
 
 gem 'deploy', :git => 'git@git.asee.org:gems/deploy.git', :branch => :realgem
 gem "authenticated_system", :git => 'git@git.asee.org:gems/authenticated_system.git', :branch => :master
 # someday:
 #gem 'reporting', :git => 'git@git.asee.org:plugins/reporting.git', :branch => :master
-#gem 'reporting', :path => '../reporting'
+gem 'reporting', :path => '../gems/reporting'
 
 # gem 'jquery-rails'
 
